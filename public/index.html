@@ -12,7 +12,11 @@
 	<div class="container">
 		<h2>Welcome to the Tesseract OCR demo</h2>
 		<div>
-			<button class="btn btn-primary start">Start</button>
+			<h4>Select some files to process</h4>
+			<form id="uploadForm" enctype="multipart/form-data" action="/uploads" method="post">
+				<input type="file" name="documentsToMap" multiple="multiple" />
+				<button type="submit" value="Upload Image" name="submit" class="btn btn-primary">Upload and Scan</button>
+			</form>
 		</div>
 		<div>
 			<section class="loaders loaders-bg-4 hide">
@@ -27,23 +31,9 @@
 </body>
 
 
-
-<script id="manifest" type="text/x-handlebars-template">
- 	<h3>Manifest</h3>
- 	{{#each .}}
- 		<div class="item">
-			<label>{{meta.name}}</label>
-			<p class="text">{{fileText}}</p>
-		</div>
- 	{{/each}}
-
-</script>
-
-
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript" src="handlebars-v2.0.0.js"></script>
 <script type="text/javascript" src="bootstrap.min.js"></script>
-<script type="text/javascript" src="home.js"></script>
 
 
 </html>
