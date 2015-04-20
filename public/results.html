@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tesseract OCR Demo</title>
+	
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-theme.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div class="container">
+		<h2>Tesseract OCR results</h2>
+		<div class="">
+		<a href="index.html">Back to upload</a>
+		</div>
+		<div>
+			<section class="loaders loaders-bg-4 hide">
+				<span class="loader loader-bars"><span> </span></span> Scanning...
+			</section>
+		</div>
+		<div class="manifest">
+			
+		</div>
+	</div>
+</body>
+
+
+
+<script id="manifest" type="text/x-handlebars-template">
+ 	<h3>Results</h3>
+ 	{{#each .}}
+ 		<div class="item">
+			<label>{{meta.name}}</label>
+			<p class="text">{{fileText}}</p>
+		</div>
+ 	{{/each}}
+
+</script>
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="handlebars-v2.0.0.js"></script>
+<script type="text/javascript" src="bootstrap.min.js"></script>
+<script type="text/javascript" src="home.js"></script>
+<script type="text/javascript" src="results.js"></script>
+
+
+</html>
